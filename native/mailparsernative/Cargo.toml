@@ -1,0 +1,16 @@
+[package]
+name = "mailparsernative"
+version = "0.1.0"
+authors = []
+edition = "2021"
+
+[lib]
+name = "mailparsernative"
+path = "src/lib.rs"
+crate-type = ["cdylib"]
+
+[dependencies]
+mail-parser = { version = "0.9.3", features = ["serde_support"] }
+rustler = "0.32.1"
+serde = { version = "1.0.202", features = ["derive"] }
+serde_json = { version = "1.0.117" }
